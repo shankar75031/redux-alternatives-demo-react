@@ -7,7 +7,7 @@ import "./ProductItem.css";
 
 const ProductItem = (props) => {
   // const toggleFavHandler = useContext(ProductsContext).toggleFavorite;
-  const dispatch = useStore()[1];
+  const dispatch = useStore(false)[1];
 
   return (
     <Card style={{ marginBottom: "1rem" }}>
@@ -26,4 +26,4 @@ const ProductItem = (props) => {
   );
 };
 
-export default ProductItem;
+export default React.memo(ProductItem);
